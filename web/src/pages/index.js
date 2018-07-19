@@ -45,28 +45,15 @@ class Index extends React.Component {
       "there": 2
     },
     filtered: {}
-  };
-
-  /*
-  handleClose = () => {
-    this.setState({
-      open: false,
-    });
-  };
-
-  handleClick = () => {
-    this.setState({
-      open: true,
-    });
-  };
-  */
+  }; 
 
   handleFilterInvokation = () => {
+    let service = `${window.location.protocol}//${window.location.hostname}:12001`;
     //console.log(this.state.unfiltered);
     try {
       //console.log("Attempting fetch...")
       let body = JSON.stringify(this.state.unfiltered)
-      fetch(`http://localhost:12001/?filter=${this.state.filter}`,{
+      fetch(`${service}/?filter=${this.state.filter}`,{
         method: 'post',
         headers: {'content-type': 'application/json'},
         body: body
@@ -177,28 +164,6 @@ class Index extends React.Component {
               />
             </Grid>
           </Grid>
-          {/*
-          <Dialog open={open} onClose={this.handleClose}>
-            <DialogTitle>Super Secret Password</DialogTitle>
-            <DialogContent>
-              <DialogContentText>1-2-3-4-5</DialogContentText>
-            </DialogContent>
-            <DialogActions>
-              <Button color="primary" onClick={this.handleClose}>
-                OK
-              </Button>
-            </DialogActions>
-          </Dialog>
-          <Typography variant="display1" gutterBottom>
-            Test Filter JSON
-          </Typography>
-          <Typography variant="subheading" gutterBottom>
-            example project
-          </Typography>
-          <Button variant="contained" color="secondary" onClick={this.handleClick}>
-            Super Secret Password
-          </Button>
-          */}
         </Paper>
       </div>
     );
