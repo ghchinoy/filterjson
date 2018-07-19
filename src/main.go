@@ -27,7 +27,10 @@ func main() {
 	//http.Handle("/", r)
 
 	c := cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://localhost:3000"},
+		AllowedOrigins: []string{
+			"http://localhost:3000",
+			"http://penguin.linux.test:3000",
+		},
 		AllowCredentials: true,
 	})
 	handler := c.Handler(r)
