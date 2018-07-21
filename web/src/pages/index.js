@@ -47,13 +47,27 @@ class Index extends React.Component {
     filtered: {}
   }; 
 
+  // currently only does the filters
+  assembleQueryParams = () => {
+    let queryParams = "?";
+    let filters = this.state.filter.split(',');
+    if (filters.length > 1) {
+      let joined = filters.map(f => `filter=${f}`);
+      queryParams += joined.join('&');
+      console.log("joined", queryParams)
+    } else {
+      queryParams += `filter=${this.state.filter}`;
+    }
+    return queryParams;
+  }
+
   handleFilterInvokation = () => {
     let service = `${window.location.protocol}//${window.location.hostname}:12001`;
     //console.log(this.state.unfiltered);
     try {
       //console.log("Attempting fetch...")
       let body = JSON.stringify(this.state.unfiltered)
-      fetch(`${service}/?filter=${this.state.filter}`,{
+      fetch(`${service}/${this.assembleQueryParams()}`,{
         method: 'post',
         headers: {'content-type': 'application/json'},
         body: body
