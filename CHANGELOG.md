@@ -1,5 +1,9 @@
 # Changelog
 
+0.3 20180721
+
+* ui converts comma-separated filters into appropriate query params for API
+
 0.2 20180718
 
 * add in multi-stage dockerfile
