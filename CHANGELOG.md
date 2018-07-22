@@ -1,5 +1,9 @@
 # Changelog
 
+0.4 20180722
+
+* adds `nodejs` dir, a nodejs express + Ramda server to do similar (JSON objects only, not arrays) as the golang server
+
 0.3 20180721
 
 * ui converts comma-separated filters into appropriate query params for API
