@@ -1,12 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-//import logger from 'morgan';
+const cors = require('cors');
 
 const app = express();
 const port = 12001;
 
 app.use(morgan('dev', {}));
+app.use(cors());
 //app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

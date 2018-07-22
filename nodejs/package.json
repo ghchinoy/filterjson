@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "body-parser": "*",
+    "cors": "^2.8.4",
     "express": "*",
     "morgan": "^1.9.0",
     "ramda": "*"
