@@ -1,0 +1,14 @@
+{
+  "name": "filterjson",
+  "version": "0.1.0",
+  "description": "filters json objects",
+  "main": "server.js",
+  "author": "G. Hussain Chinoy <ghchinoy@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "morgan": "^1.9.0",
+    "ramda": "*"
+  }
+}
