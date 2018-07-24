@@ -1,6 +1,6 @@
 # filterjson
 
-a small service to remove top level keys from a JSON structure
+a small service to remove|retain top level keys from a JSON structure
 
 
 ## usage
