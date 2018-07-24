@@ -42,3 +42,11 @@ to make the service available on `8080`)
 
 There's also a nodejs version of the server in `nodejs` that implements only the 
 `filter` param (not `remove`), and for top level JSON objects (not JSON arrays)
+
+## web ui
+
+There's a simple web ui in `web` that can be used to test the service. Start with 
+`yarn install && yarn run start` - it looks for the service to be available at 
+localhost:12001
+
+[short video showing capabilities](https://www.useloom.com/share/4dd8b0e7a44d4589a17eb2ac6cb84580)
